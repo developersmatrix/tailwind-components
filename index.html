@@ -1,114 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <title>Components</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/dist/output.css" />
-  <title>Components</title>
-</head>
+  <body class="bg-zinc-50">
+    <header class="fixed left-0 right-0 backdrop-opacity-1">
+      <div
+        class="w-full h-[3rem] bg-zinc-400 flex justify-center sm:justify-start items-center drop-shadow-lg"
+      >
+        <a href="/" class="flex gap-2 font-bold uppercase sm:ml-6">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-5 h-5 centered"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8.478 1.6a.75.75 0 01.273 1.025 3.72 3.72 0 00-.425 1.122c.058.057.118.114.18.168A4.491 4.491 0 0112 2.25c1.413 0 2.673.651 3.497 1.668.06-.054.12-.11.178-.167a3.717 3.717 0 00-.426-1.126.75.75 0 111.298-.75 5.22 5.22 0 01.671 2.045.75.75 0 01-.187.582c-.241.27-.505.52-.787.749a4.495 4.495 0 01.216 2.1c-.106.792-.753 1.295-1.417 1.403-.182.03-.364.057-.547.081.152.227.273.476.359.741a23.122 23.122 0 003.832-.802 23.241 23.241 0 00-.345-2.634.75.75 0 011.474-.28c.21 1.115.348 2.256.404 3.418a.75.75 0 01-.516.749c-1.527.5-3.119.855-4.76 1.05-.074.38-.22.735-.423 1.05a24.61 24.61 0 015.943 1.358.75.75 0 01.492.75 24.665 24.665 0 01-1.189 6.25.75.75 0 01-1.425-.47 23.141 23.141 0 001.077-5.307c-.5-.168-1.009-.32-1.524-.454.068.234.104.484.104.746 0 3.956-2.521 7.5-6 7.5-3.478 0-6-3.544-6-7.5 0-.262.037-.511.104-.746-.514.134-1.022.286-1.522.454a23.14 23.14 0 001.077 5.308.75.75 0 01-1.425.468 24.663 24.663 0 01-1.19-6.25.75.75 0 01.493-.749 24.593 24.593 0 014.964-1.24h.01c.321-.046.644-.085.969-.118a2.982 2.982 0 01-.424-1.05 24.614 24.614 0 01-4.76-1.05.75.75 0 01-.516-.75c.057-1.161.194-2.302.405-3.417a.75.75 0 011.474.28c-.164.862-.28 1.74-.345 2.634 1.237.37 2.517.641 3.832.802.085-.265.207-.514.359-.74a18.732 18.732 0 01-.547-.082c-.664-.108-1.311-.611-1.417-1.403a4.535 4.535 0 01.217-2.103 6.788 6.788 0 01-.788-.751.75.75 0 01-.187-.583 5.22 5.22 0 01.67-2.04.75.75 0 011.026-.273z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          Brand
+        </a>
 
-<body class="bg-zinc-50">
-  <header class="fixed left-0 right-0 backdrop-opacity-1">
-    <div class="w-full h-[3rem] bg-zinc-400 flex justify-center items-center drop-shadow-lg">
-      <a href="/">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 centered">
-          <path fill-rule="evenodd"
-            d="M8.478 1.6a.75.75 0 01.273 1.025 3.72 3.72 0 00-.425 1.122c.058.057.118.114.18.168A4.491 4.491 0 0112 2.25c1.413 0 2.673.651 3.497 1.668.06-.054.12-.11.178-.167a3.717 3.717 0 00-.426-1.126.75.75 0 111.298-.75 5.22 5.22 0 01.671 2.045.75.75 0 01-.187.582c-.241.27-.505.52-.787.749a4.495 4.495 0 01.216 2.1c-.106.792-.753 1.295-1.417 1.403-.182.03-.364.057-.547.081.152.227.273.476.359.741a23.122 23.122 0 003.832-.802 23.241 23.241 0 00-.345-2.634.75.75 0 011.474-.28c.21 1.115.348 2.256.404 3.418a.75.75 0 01-.516.749c-1.527.5-3.119.855-4.76 1.05-.074.38-.22.735-.423 1.05a24.61 24.61 0 015.943 1.358.75.75 0 01.492.75 24.665 24.665 0 01-1.189 6.25.75.75 0 01-1.425-.47 23.141 23.141 0 001.077-5.307c-.5-.168-1.009-.32-1.524-.454.068.234.104.484.104.746 0 3.956-2.521 7.5-6 7.5-3.478 0-6-3.544-6-7.5 0-.262.037-.511.104-.746-.514.134-1.022.286-1.522.454a23.14 23.14 0 001.077 5.308.75.75 0 01-1.425.468 24.663 24.663 0 01-1.19-6.25.75.75 0 01.493-.749 24.593 24.593 0 014.964-1.24h.01c.321-.046.644-.085.969-.118a2.982 2.982 0 01-.424-1.05 24.614 24.614 0 01-4.76-1.05.75.75 0 01-.516-.75c.057-1.161.194-2.302.405-3.417a.75.75 0 011.474.28c-.164.862-.28 1.74-.345 2.634 1.237.37 2.517.641 3.832.802.085-.265.207-.514.359-.74a18.732 18.732 0 01-.547-.082c-.664-.108-1.311-.611-1.417-1.403a4.535 4.535 0 01.217-2.103 6.788 6.788 0 01-.788-.751.75.75 0 01-.187-.583 5.22 5.22 0 01.67-2.04.75.75 0 011.026-.273z"
-            clip-rule="evenodd" />
+        <svg
+          id="menu-open"
+          onclick="menuHandler"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-5 h-5 absolute z-25 right-5 sm:hidden cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 9h16.5m-16.5 6.75h16.5"
+          />
         </svg>
-      </a>
-      <svg id="menu-open" onclick="menuHandler" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-        stroke-width="1.5" stroke="currentColor" class="w-5 h-5 absolute z-25 right-5 sm:hidden cursor-pointer">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
-      </svg>
-      <svg id="menu-close" onclick="menuHandler" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-        stroke-width="1.5" stroke="currentColor" class="w-5 h-5 absolute z-25 right-5 hidden cursor-pointer">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-      </svg>
+        <svg
+          id="menu-close"
+          onclick="menuHandler"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-5 h-5 absolute z-25 right-5 hidden cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+      <div
+        class="bg-zinc-400 text-zinc-900 px-4 hidden sm:hidden"
+        id="nav-list"
+      >
+        <nav>
+          <ul>
+            <li class="flex justify-center py-4 border-b-2 border-zinc-100">
+              <input
+                type="text"
+                placeholder="search"
+                class="rounded w-[80%] px-4 py-1 bg-zinc-200 outline-none text-gray-800"
+              />
+            </li>
+            <li class="border-b-2 border-zinc-100 flex justify-center">
+              <a
+                class="flex flex-grow justify-center hover:text-white font-bold tracking-wider py-4"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="border-b-2 border-zinc-100 flex justify-center">
+              <a
+                class="flex flex-grow justify-center hover:text-white font-bold tracking-wider py-4"
+                href="#"
+                >About</a
+              >
+            </li>
+            <li class="border-b-2 border-zinc-100 flex justify-center">
+              <a
+                class="flex flex-grow justify-center hover:text-white font-bold tracking-wider py-4"
+                href="#"
+                >Contact</a
+              >
+            </li>
+            <li class="border-b-2 border-zinc-100 flex justify-center">
+              <a
+                class="flex flex-grow justify-center hover:text-white font-bold tracking-wider py-4"
+                href="#"
+                >More</a
+              >
+            </li>
+            <li class="border-b-2 border-zinc-100 flex justify-center">
+              <a
+                class="flex flex-grow justify-center hover:text-white font-bold tracking-wider py-4"
+                href="#"
+                >Mail</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="pt-16 mx-5">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, autem
+      soluta dolore saepe necessitatibus deleniti magni numquam animi tenetur
+      nostrum eveniet sint voluptatum. Fugiat deleniti eaque, tempora
+      consequatur et dignissimos quos! Pariatur laboriosam eius deserunt eum!
+      Eos eaque unde quis vero architecto laudantium minus, porro praesentium
+      assumenda mollitia iste id neque, dolorem asperiores est facere, eveniet
+      voluptas expedita suscipit sequi illum reprehenderit. Consectetur nam
+      dolore autem quia maiores harum sapiente magnam illum, id consequuntur
+      fugit libero quibusdam quos eveniet doloremque repellendus rerum possimus
+      natus dolorem aliquam ex qui quaerat. Fugiat natus quisquam porro nemo
+      error, quasi beatae, id consequatur voluptates ipsum ut corrupti iste
+      nulla blanditiis sed! Ducimus neque id voluptas exercitationem ad sapiente
+      quos, reprehenderit soluta blanditiis nostrum, ut sed veniam cupiditate in
+      dolore labore nemo consequatur fugiat, nisi repellat! Doloribus quasi illo
+      laborum voluptatibus debitis est corrupti accusantium non, neque minima
+      eveniet earum quam excepturi saepe sit magnam voluptate ipsam fuga aliquid
+      soluta distinctio unde maxime tempore? Perspiciatis magnam ratione fugit,
+      esse debitis suscipit rerum reiciendis hic dolore. Distinctio, id aliquam
+      delectus adipisci illo nisi officiis explicabo ea in qui dignissimos ad
+      veniam neque provident? Eum, tempore quod atque dolorem facere soluta
+      consectetur velit minima perferendis quo esse delectus. Asperiores quo
+      nobis vero dolorem alias numquam, provident quae iusto dolorum est.
+      Voluptatem obcaecati suscipit, libero ut soluta facilis nobis at quam?
+      Vitae placeat modi consectetur error corporis quia quae odit sunt, eaque,
+      veniam itaque aperiam eum! Blanditiis nam esse inventore laboriosam
+      laudantium exercitationem aspernatur harum quas, eligendi facilis qui,
+      animi ipsum corrupti quia reprehenderit iusto laborum enim porro! Earum
+      eius itaque dolorem consequatur veritatis ad natus aspernatur minima
+      inventore non quia sequi doloribus, nihil ratione amet at reiciendis
+      repellendus placeat totam maxime. Repudiandae, neque? Eaque corporis enim
+      porro doloribus itaque soluta culpa suscipit velit, quasi officia dolores
+      dicta iste. Vero iusto nostrum earum molestias a. Impedit voluptatem
+      doloribus omnis eligendi eaque! Eos consequatur quos nulla nesciunt dicta
+      voluptatem asperiores quae, labore blanditiis aut doloribus sed facere
+      nostrum quisquam nemo expedita repellendus. Alias harum ipsa, ipsam in
+      explicabo inventore voluptatibus aliquam, dicta magni totam neque et
+      repudiandae dolor nulla libero aspernatur ab doloribus ratione nesciunt
+      ad, sed consequuntur. Officiis velit consequuntur asperiores eos nemo
+      eaque, deserunt voluptate reiciendis commodi quis amet distinctio, natus,
+      explicabo sequi! Aliquam cumque, accusamus eius sapiente odio ab magnam
+      rem, earum error inventore ratione necessitatibus blanditiis commodi iure,
+      eveniet quas laudantium mollitia deleniti cum molestiae! Neque, id dolores
+      error, perferendis exercitationem, harum blanditiis esse velit corporis
+      perspiciatis possimus? Praesentium magni eveniet voluptatibus in provident
+      ipsa, minima expedita distinctio dignissimos officia cum labore ab quos,
+      nulla eum est architecto dolores natus facere culpa ex quisquam deleniti.
+      Recusandae natus unde labore, delectus molestiae reprehenderit laboriosam
+      fugit accusamus cumque culpa incidunt deserunt at aliquid rem. Nihil, non
+      voluptatem. Quidem ea commodi molestiae incidunt in. Deserunt voluptatem
+      animi, error distinctio, laudantium quos cumque necessitatibus
+      consequuntur sed blanditiis officiis eaque impedit hic asperiores
+      similique, placeat eligendi? Exercitationem quos, minima corrupti
+      praesentium nam quam dolorem omnis explicabo ipsum quibusdam, deleniti
+      eveniet!
+    </main>
 
-    </div>
-    <div class="bg-zinc-400 text-gray-200 px-4  hidden sm:hidden" id="nav-list">
-      <nav>
-        <ul>
-          <li class=" border-b-2 border-zinc-100 flex justify-center">
-            <a class="flex flex-grow justify-center hover:text-white font-bold tracking-wider py-4" href="#">Home</a>
-          </li>
-          <li class=" border-b-2 border-zinc-100 flex justify-center">
-            <a class="flex flex-grow justify-center hover:text-white font-bold tracking-wider py-4" href="#">About</a>
-          </li>
-          <li class=" border-b-2 border-zinc-100 flex justify-center">
-            <a class="flex flex-grow justify-center hover:text-white font-bold tracking-wider py-4" href="#">Contact</a>
-          </li>
-          <li class=" border-b-2 border-zinc-100 flex justify-center">
-            <a class="flex flex-grow justify-center hover:text-white font-bold tracking-wider py-4" href="#">More</a>
-          </li>
-          <li class=" border-b-2 border-zinc-100 flex justify-center">
-            <a class="flex flex-grow justify-center hover:text-white font-bold tracking-wider py-4" href="#">Mail</a>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main class="pt-16 mx-5">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, autem
-    soluta dolore saepe necessitatibus deleniti magni numquam animi tenetur
-    nostrum eveniet sint voluptatum. Fugiat deleniti eaque, tempora
-    consequatur et dignissimos quos! Pariatur laboriosam eius deserunt eum!
-    Eos eaque unde quis vero architecto laudantium minus, porro praesentium
-    assumenda mollitia iste id neque, dolorem asperiores est facere, eveniet
-    voluptas expedita suscipit sequi illum reprehenderit. Consectetur nam
-    dolore autem quia maiores harum sapiente magnam illum, id consequuntur
-    fugit libero quibusdam quos eveniet doloremque repellendus rerum possimus
-    natus dolorem aliquam ex qui quaerat. Fugiat natus quisquam porro nemo
-    error, quasi beatae, id consequatur voluptates ipsum ut corrupti iste
-    nulla blanditiis sed! Ducimus neque id voluptas exercitationem ad sapiente
-    quos, reprehenderit soluta blanditiis nostrum, ut sed veniam cupiditate in
-    dolore labore nemo consequatur fugiat, nisi repellat! Doloribus quasi illo
-    laborum voluptatibus debitis est corrupti accusantium non, neque minima
-    eveniet earum quam excepturi saepe sit magnam voluptate ipsam fuga aliquid
-    soluta distinctio unde maxime tempore? Perspiciatis magnam ratione fugit,
-    esse debitis suscipit rerum reiciendis hic dolore. Distinctio, id aliquam
-    delectus adipisci illo nisi officiis explicabo ea in qui dignissimos ad
-    veniam neque provident? Eum, tempore quod atque dolorem facere soluta
-    consectetur velit minima perferendis quo esse delectus. Asperiores quo
-    nobis vero dolorem alias numquam, provident quae iusto dolorum est.
-    Voluptatem obcaecati suscipit, libero ut soluta facilis nobis at quam?
-    Vitae placeat modi consectetur error corporis quia quae odit sunt, eaque,
-    veniam itaque aperiam eum! Blanditiis nam esse inventore laboriosam
-    laudantium exercitationem aspernatur harum quas, eligendi facilis qui,
-    animi ipsum corrupti quia reprehenderit iusto laborum enim porro! Earum
-    eius itaque dolorem consequatur veritatis ad natus aspernatur minima
-    inventore non quia sequi doloribus, nihil ratione amet at reiciendis
-    repellendus placeat totam maxime. Repudiandae, neque? Eaque corporis enim
-    porro doloribus itaque soluta culpa suscipit velit, quasi officia dolores
-    dicta iste. Vero iusto nostrum earum molestias a. Impedit voluptatem
-    doloribus omnis eligendi eaque! Eos consequatur quos nulla nesciunt dicta
-    voluptatem asperiores quae, labore blanditiis aut doloribus sed facere
-    nostrum quisquam nemo expedita repellendus. Alias harum ipsa, ipsam in
-    explicabo inventore voluptatibus aliquam, dicta magni totam neque et
-    repudiandae dolor nulla libero aspernatur ab doloribus ratione nesciunt
-    ad, sed consequuntur. Officiis velit consequuntur asperiores eos nemo
-    eaque, deserunt voluptate reiciendis commodi quis amet distinctio, natus,
-    explicabo sequi! Aliquam cumque, accusamus eius sapiente odio ab magnam
-    rem, earum error inventore ratione necessitatibus blanditiis commodi iure,
-    eveniet quas laudantium mollitia deleniti cum molestiae! Neque, id dolores
-    error, perferendis exercitationem, harum blanditiis esse velit corporis
-    perspiciatis possimus? Praesentium magni eveniet voluptatibus in provident
-    ipsa, minima expedita distinctio dignissimos officia cum labore ab quos,
-    nulla eum est architecto dolores natus facere culpa ex quisquam deleniti.
-    Recusandae natus unde labore, delectus molestiae reprehenderit laboriosam
-    fugit accusamus cumque culpa incidunt deserunt at aliquid rem. Nihil, non
-    voluptatem. Quidem ea commodi molestiae incidunt in. Deserunt voluptatem
-    animi, error distinctio, laudantium quos cumque necessitatibus
-    consequuntur sed blanditiis officiis eaque impedit hic asperiores
-    similique, placeat eligendi? Exercitationem quos, minima corrupti
-    praesentium nam quam dolorem omnis explicabo ipsum quibusdam, deleniti
-    eveniet!
-  </main>
-
-
-  <script src="js/index.js"></script>
-</body>
-
+    <script src="js/index.js"></script>
+  </body>
 </html>
